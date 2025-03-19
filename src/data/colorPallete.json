@@ -1,0 +1,19 @@
+{
+    "primary": {
+        "primary": "#702ed2"
+    },
+    "neutral": {
+        "light": {
+            "neutral-background": "#f7f7f7",
+            "neutral-background-highlight": "#e5e5e5",
+            "neutral-text-highlight": "#1b202c",
+            "neutral-text": "#151821"
+        },
+        "dark": {
+            "neutral-background": "#151821",
+            "neutral-background-highlight": "#1b202c",
+            "neutral-text-highlight": "#e5e5e5",
+            "neutral-text": "#f7f7f7"
+        }
+    }
+}
