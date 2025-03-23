@@ -1,25 +1,24 @@
-## Descripción
+## Description
 
-<!-- Ejemplo: Este pull request incluye correcciones en los formularios OrderDetails y ShippingForm. -->
+<!-- Example: This Pull Request contains corrections in both Search and Shipping forms -->
 
-## Tipo de cambio
+## Change Type
 
-- [ ] Nueva funcionalidad  
-- [ ] Corrección de errores  
-- [ ] Mejoras en el rendimiento  
-- [ ] Refactorización  
-- [ ] Otros (especificar):  
+- [ ] New Feature  
+- [ ] Errors fixing  
+- [ ] Performance enhancement  
+- [ ] Refactorization  
+- [ ] Other (specify):  
 
-## ¿Cómo se probaron estos cambios?
+## How were these changes tested?
 
-1. <!-- Detalla cómo se verificaron los cambios -->
+1. <!-- Type in detail how this changes were tested -->
 
 ## Checklist
 
-- [ ] Los cambios han sido probados en el entorno local.  
-- [ ] Los campos en ambos formularios funcionan correctamente y sin errores.  
-- [ ] No se detectaron regresiones en otras funcionalidades relacionadas.  
+- [ ] Changes were tested in local environment.  
+- [ ] Fields in both forms work correctly.  
 
-## Información adicional
+## Aditional Information
 
-<!-- Cualquier comentario adicional relevante sobre este pull request -->
+<!-- Any relevant aditional comment for this pull request -->
