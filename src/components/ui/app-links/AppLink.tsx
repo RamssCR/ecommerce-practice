@@ -30,7 +30,7 @@ export default function AppLink({ to, target, children, className, ...props }: L
             to={to} 
             target={target}
             rel={target && 'noopener noreferrer'}
-            className={classMerger('text-neutral-text', className)} 
+            className={classMerger('text-neutral-text outline-none', className)} 
             {...props}
         >
             {children}
