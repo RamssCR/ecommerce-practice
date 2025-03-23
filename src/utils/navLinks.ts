@@ -1,0 +1,1 @@
+export const links = ['Collections', 'Headphones', 'Speakers', 'Accessories']
