@@ -17,7 +17,7 @@ export default function AppNavLink({ to, children, className, ...props }: NavLin
     return (
         <NavLink 
             to={to}
-            className={classMerger('text-neutral-text font-medium', className)}
+            className={classMerger('text-neutral-text font-medium outline-none', className)}
             {...props}
         >
             {children}
