@@ -1,9 +1,17 @@
 import { useLocation } from 'react-router-dom'
 import { links } from '@utils/navLinks'
+import { useThemeProvider } from '@hooks/useThemeProvider'
 import AppNavLink from '@components/ui/app-links/AppNavLink'
 import Button from '@components/ui/buttons/Button'
 
+/**
+ * Renders a component that displays the
+ * Desktop's navigation menu.
+ * @example
+ * <Navbar />
+ */
 export default function Navbar() {
+    const { theme, toggleTheme } = useThemeProvider()
     const { pathname } = useLocation()
     const category = pathname.split('/')[1]
 
@@ -32,9 +40,13 @@ export default function Navbar() {
                 {links.map((link, index) => <Item key={index} value={link} />)}
                 <Button 
                     variant="none" 
-                    className="text-neutral-text-highlight font-medium hover:cursor-pointer"
+                    className={`
+                        text-neutral-text-highlight font-medium hover:cursor-pointer
+                        ${theme === 'dark' ? 'text-primary' : 'text-neutral-text-highlight'}
+                    `}
+                    onClick={toggleTheme}
                 >
-                    Dark Mode
+                    {theme === 'dark' ? 'Dark' : 'Light'} Mode
                 </Button>
             </ul>
         </nav>

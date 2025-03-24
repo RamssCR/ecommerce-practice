@@ -3,6 +3,11 @@ import Legal from './Legal'
 import Container from '@components/ui/containers/Container'
 import Text from '@components/ui/texts/Text'
 
+/**
+ * Renders the app footer.
+ * @example
+ * <Footer />
+ */
 export default function Footer() {
     return (
         <footer className="w-full py-7 px-10 bg-neutral-background-highlight lg:py-12">
