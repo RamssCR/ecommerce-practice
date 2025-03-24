@@ -1,1 +1,1 @@
-export const links = ['Collections', 'Headphones', 'Speakers', 'Accessories']
+export const links = ['Wireless', 'Headphones', 'Speakers', 'Accessories']
