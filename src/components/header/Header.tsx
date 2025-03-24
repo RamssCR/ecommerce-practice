@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faCartShopping, faX } from '@fortawesome/free-solid-svg-icons'
+import { useThemeProvider } from '@hooks/useThemeProvider'
 import Button from '@components/ui/buttons/Button'
 import Container from '@components/ui/containers/Container'
 import Image from '@components/ui/images/Image'
@@ -10,6 +11,7 @@ import Navbar from './Navbar'
 import logo from '@assets/musioshore-header-logo.png'
 
 export default function Header() {
+    const { theme } = useThemeProvider()
     const [isOpen, setIsOpen] = useState(false)
     const toggle = () => setIsOpen(prev => !prev)
     const iconStyle = "fill-neutral-text-highlight cursor-pointer text-xl"
@@ -23,7 +25,7 @@ export default function Header() {
                         onClick={() => setIsOpen(false)} 
                         alt="MusioShore" 
                         title="MusioShore" 
-                        className="w-34 h-10 object-contain" 
+                        className={`w-34 h-10 object-contain ${theme === 'dark' && 'brightness-0 invert'}`} 
                     />
                 </AppNavLink>
                 <section className="flex items-center gap-8">
