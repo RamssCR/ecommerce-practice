@@ -19,8 +19,8 @@ export default function Navbar() {
         <li className="flex flex-col items-center gap-3">
             <AppNavLink 
                 to={`/${value}`}
-                title={`Head to ${value}`}
-                aria-label={`Heading to section ${value}`}
+                title={`Head to ${value || 'Home'} page`}
+                aria-label={`Heading to page ${value || 'Home'}`}
                 className={`
                     px-5 py-2
                     ${value.toLowerCase() === category.toLowerCase() 
@@ -29,14 +29,14 @@ export default function Navbar() {
                     }
                 `}
             >
-                {value}
+                {value || 'Home'}
             </AppNavLink>
         </li>
     )
 
     return (
         <nav className="hidden lg:block" id="navbar">
-            <ul className="flex items-center gap-8">
+            <ul className="flex items-center gap-7">
                 {links.map((link, index) => <Item key={index} value={link} />)}
                 <Button 
                     variant="none" 
