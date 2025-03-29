@@ -27,7 +27,7 @@ export default function MainBanner() {
                 </Text>
                 <AppLink 
                     to="/new-products"
-                    className="py-3 px-5 w-fit rounded-lg bg-primary text-white md:mt-4 hover:brightness-110"
+                    className="py-3 px-7 w-fit rounded-lg bg-primary text-white md:mt-4 hover:brightness-110"
                 >
                     View Products
                 </AppLink>
