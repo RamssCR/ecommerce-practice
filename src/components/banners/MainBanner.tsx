@@ -16,7 +16,7 @@ export default function MainBanner() {
             <Image
                 src={mainBanner}
                 alt="Main Banner"
-                className="w-full relative lg:max-h-[30em]"
+                className="w-full relative lg:max-h-[34em]"
             />
             <section className="absolute top-0 left-0 w-full h-full bg-black/55 flex flex-col justify-center items-center gap-2 xl:gap-4 text-center px-6">
                 <Title as="h2" className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-white">
