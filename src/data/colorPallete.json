@@ -1,6 +1,8 @@
 {
     "primary": {
-        "primary": "#702ed2"
+        "primary-light": "#efe5fe",
+        "primary": "#702ed2",
+        "primary-dark": "#2e0f5d"
     },
     "neutral": {
         "light": {
