@@ -8,7 +8,7 @@ import mockImage from '/mock-images/categories/headsets.avif'
 export default function Categories() {
     return (
         <section className="w-full py-10 md:py-16 lg:py-24">
-            <Container className="grid grid-cols-1 gap-y-14 lg:grid-cols-4 lg:gap-x-4 xl:place-items-center">
+            <Container className="grid grid-cols-1 gap-y-14 lg:grid-cols-4 lg:gap-x-4 lg:place-items-center">
                 <section className="w-full flex flex-col items-center gap-4 text-center xl:text-left xl:items-start">
                     <Text className="text-primary text-[0.9em]">Favorite items</Text>
                     <Title as="h3" className="text-xl font-normal lg:px-3 lg:text-2xl xl:px-0">Check the most popular categories here!</Title>
