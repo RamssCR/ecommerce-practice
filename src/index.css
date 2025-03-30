@@ -2,7 +2,9 @@
 @import "tailwindcss";
 
 :root {
+    --primary-light: #efe5fe;
     --primary: #702ed2;
+    --primary-dark: #2e0f5d;
 
     --neutral-background: #f7f7f7;
     --neutral-background-highlight: #e5e5e5;
@@ -13,7 +15,9 @@
 @theme {
     /* Colors */
     /* Primary */
+    --color-primary-light: var(--primary-light);
     --color-primary: var(--primary);
+    --color-primary-dark: var(--primary-dark);
 
     /* Neutral */
     --color-neutral-background: var(--neutral-background); /* light: background, dark: text */
