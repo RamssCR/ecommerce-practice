@@ -1,0 +1,26 @@
+[
+    {
+        "id": "wireless",
+        "name": "Wireless",
+        "image": "/mock-images/categories/wireless.jpg",
+        "timesSearched": 15420
+    },
+    {
+        "id": "headsets",
+        "name": "Headsets",
+        "image": "/mock-images/categories/headsets.avif",
+        "timesSearched": 12350
+    },
+    {
+        "id": "speakers",
+        "name": "Speakers",
+        "image": "/mock-images/categories/speakers.jpg",
+        "timesSearched": 9840
+    },
+    {
+        "id": "accessories",
+        "name": "Accessories",
+        "image": "/mock-images/categories/accessories.jpg",
+        "timesSearched": 7650
+    }
+]

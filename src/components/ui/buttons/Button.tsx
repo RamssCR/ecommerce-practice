@@ -2,7 +2,7 @@ import type { ButtonHTMLAttributes } from 'react'
 import { classMerger } from '@utils/classMerger'
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-    variant?: 'primary' | 'outline' | 'none'
+    variant?: 'primary' | 'outline' | 'color-primary' | 'color-primary-light' | 'color-primary-dark' | 'none'
 }
 
 /**
@@ -18,6 +18,9 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 export default function Button({ children, variant = "primary", onClick, className, ...props }: ButtonProps) {
     const variants = {
         primary: 'bg-neutral-text text-neutral-background',
+        "color-primary": 'bg-primary text-white',
+        "color-primary-light": 'bg-primary-light text-primary-dark',
+        "color-primary-dark": 'bg-primary-dark text-primary-light',
         outline: 'bg-transparent text-neutral-text border-neutral-text',
         none: ''
     }

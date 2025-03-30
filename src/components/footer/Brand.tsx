@@ -28,10 +28,10 @@ export default function Brand() {
                     <AppLink 
                         key={index} 
                         to={link}
-                        title={`Head to ${link}`}
-                        className="text-lg font-medium hover:text-primary"
+                        title={`Head to ${link || 'Home'}`}
+                        className="text-lg font-medium hover:text-primary capitalize"
                     >
-                        {link}
+                        {link || 'Home'}
                     </AppLink>
                 ))}
             </nav>

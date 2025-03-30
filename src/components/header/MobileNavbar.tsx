@@ -19,18 +19,18 @@ export default function MobileNavbar({ toggle }: { toggle: () => void }) {
     const NavLinkItem = ({ value }: { value: string }) => (
         <AppNavLink 
             to={`/${value}`}
-            title={`Head to ${value}`}
-            aria-label={`Heading to section ${value}`}
+            title={`Head to ${value || 'Home'}`}
+            aria-label={`Heading to section ${value || 'Home'}`}
             onClick={toggle}
             className={`
-                w-full text-lg font-medium py-3 px-4 rounded-md duration-100 transition
+                w-full text-lg font-medium py-3 px-4 rounded-md duration-100 transition capitalize
                 ${value.toLowerCase() === category.toLowerCase()
                     ? 'bg-neutral-background-highlight'
                     : 'bg-transparent'
                 }
             `}
         >
-            {value}
+            {value || 'Home'}
         </AppNavLink>
     )
 
