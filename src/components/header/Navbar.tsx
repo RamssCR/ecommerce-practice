@@ -22,7 +22,7 @@ export default function Navbar() {
                 title={`Head to ${value || 'Home'} page`}
                 aria-label={`Heading to page ${value || 'Home'}`}
                 className={`
-                    px-5 py-2
+                    px-5 py-2 capitalize
                     ${value.toLowerCase() === category.toLowerCase() 
                         ? 'text-primary' 
                         : 'text-neutral-text-highlight'
