@@ -17,7 +17,7 @@ export default function Header() {
     const iconStyle = "fill-neutral-text-highlight cursor-pointer text-xl"
 
     return (
-        <header className="w-full grid place-items-center px-7 py-6 gap-y-4">
+        <header className="fixed z-10 bg-neutral-background shadow-md w-full grid place-items-center px-7 py-6 gap-y-4">
             <Container className="flex items-center justify-between">
                 <AppNavLink to="/">
                     <Image 
