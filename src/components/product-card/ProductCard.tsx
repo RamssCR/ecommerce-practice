@@ -28,7 +28,7 @@ export default function ProductCard() {
                         <Title 
                             as="h4" 
                             className={`
-                                text-xl font-bold 
+                                text-xl font-semibold 
                                 ${theme === 'dark' ? 'text-primary-light' : 'text-primary-dark'}
                             `}>
                                 $999.00
