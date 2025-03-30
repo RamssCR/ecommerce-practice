@@ -19,24 +19,18 @@ export default function SaleCard({ theme = "background" }: SaleCardProps) {
 
     return (
         <article className={classMerger(
-            'grid grid-cols-2 py-6 pl-2 pr-5 rounded-lg overflow-hidden place-items-center lg:pr-6',
+            'w-full flex flex-col items-end justify-between gap-6 p-6 rounded-lg overflow-hidden',
             theme !== "background" && 'bg-radial-[at_50%_75%] to-90% text-white',
             variants[theme]
         )}>
-            <Image
-                src={headsetsImage}
-                className="scale-130 ml-2 md:ml-4"
-            />
-            <section className="w-full flex flex-col items-end justify-between gap-6">
-                <span className="block py-2 text-lg px-6 border border-slate-100 rounded-xl">60% OFF</span>
-                <Title as="h2" className="mb-3 text-2xl font-medium text-right text-white xl:text-4xl">Wireless Headset</Title>
-                <AppLink
-                    to="/products/wireless-headset"
-                    className="py-3 bg-amber-300 font-medium px-6 rounded-xl text-black"
-                >
-                    Check it out!
-                </AppLink>
-            </section>
+            <span className="block py-2 text-lg px-6 border border-slate-100 rounded-xl">60% OFF</span>
+            <Title as="h2" className="mb-3 text-2xl font-medium text-right text-white xl:text-3xl">Wireless Headset</Title>
+            <AppLink
+                to="/products/wireless-headset"
+                className="py-3 bg-amber-300 font-medium px-6 rounded-xl text-black"
+            >
+                Check it out!
+            </AppLink>
         </article>
     )
 }
