@@ -5,6 +5,7 @@ import AppLink from "@components/ui/app-links/AppLink"
 import Button from '@components/ui/buttons/Button'
 import Title from '@components/ui/texts/Title'
 import Text from '@components/ui/texts/Text'
+import RatingCard from "@components/rating-card/RatingCard"
 
 export default function ProductCard() {
     const { theme } = useThemeProvider()
@@ -22,7 +23,8 @@ export default function ProductCard() {
                     </Title>
                     <ProductTag tag="New" />
                 </AppLink>
-                <article className="mb-4">
+                <RatingCard rating={4} size="small" />
+                <article className="my-4">
                     <Text className="text-sm text-slate-400">$1,299.99</Text>
                     <article className="flex items-center gap-3">
                         <Title 
