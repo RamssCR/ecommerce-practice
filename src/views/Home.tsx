@@ -1,13 +1,21 @@
 import { services } from '@utils/serviceMap'
-import MainBanner from '@components/banners/MainBanner'
 import Categories from '@components/categories/Categories'
+import Container from '@components/ui/containers/Container'
+import MainBanner from '@components/banners/MainBanner'
+import NewProducts from '@components/new-products/NewProducts'
 import SaleCard from '@components/sale-card/SaleCard'
 import ServiceItem from '@components/service-item/ServiceItem'
-import Container from '@components/ui/containers/Container'
-import NewProducts from '@components/new-products/NewProducts'
-import Title from '@components/ui/texts/Title'
 import TestimonialCard from '@components/testimonial-card/TestimonialCard'
+import Title from '@components/ui/texts/Title'
 
+/**
+ * @component Home
+ * This component renders the home page of the application, including 
+ * the main banner, categories, sale cards, services, new products, 
+ * and testimonials.
+ * @example
+ * <Home />
+ */
 export default function Home() {
     return (
         <section className="mt-24 w-full px-4 py-6 bg-neutral-background md:px-8">
