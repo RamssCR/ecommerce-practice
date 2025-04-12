@@ -1,8 +1,8 @@
 import { faBookmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useThemeProvider } from '@hooks/useThemeProvider';
-import mockImage from '/mock-images/categories/headsets.avif';
 import AppLink from '@components/ui/app-links/AppLink';
+import mockImage from '/mock-images/categories/headsets.avif';
 
 export default function ProductImage() {
     const { theme } = useThemeProvider()

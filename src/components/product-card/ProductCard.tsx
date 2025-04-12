@@ -18,15 +18,22 @@ export default function ProductCard() {
             <ProductImage />
             <section className="space-y-2">
                 <AppLink to="/products/wireless-headsets" className="flex justify-between items-start gap-6">
-                    <Title as="h3" className="text-lg font-semibold line-clamp-2 hover:cursor-pointer hover:text-primary">
+                    <Title 
+                        as="h3" 
+                        title="LumiSound Pulse Pro X9000 - Smart LED Speaker"
+                        className="text-lg font-semibold line-clamp-2 hover:cursor-pointer hover:text-primary"
+                    >
                         LumiSound Pulse Pro X9000 - Smart LED Speaker
                     </Title>
                     <ProductTag tag="New" />
                 </AppLink>
-                <RatingCard rating={4} size="small" />
+                <section className="flex items-center min-[425px]:flex-col min-[425px]:items-start gap-2 md:flex-row">
+                    <RatingCard rating={4} size="small" />
+                    <Text className="text-[0.75rem] h-fit text-slate-400">(12 Reviews)</Text>
+                </section>
                 <article className="my-4">
-                    <Text className="text-sm text-slate-400">$1,299.99</Text>
-                    <article className="flex items-center gap-3">
+                    <Text className="text-sm text-slate-400 min-[425px]:mb-2 md:mb-0">$1,299.99</Text>
+                    <article className="flex items-center min-[425px]:flex-col-reverse min-[425px]:items-start gap-2 md:flex-row">
                         <Title 
                             as="h4" 
                             className={`
