@@ -1,7 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Header from './components/header/Header'
 import Footer from './components/footer/Footer'
+import Header from './components/header/Header'
 import Home from './views/Home'
+import Products from './views/Products'
 
 export default function App() {
   return (
@@ -10,7 +11,7 @@ export default function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/:category" element={<h1>Category</h1>} />
+          <Route path="/products" element={<Products />} />
           <Route path="/cart" element={<h1>Cart</h1>} />
         </Routes>
         <Footer />
