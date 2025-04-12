@@ -36,7 +36,7 @@ export default function RatingCard({ rating, size = "medium" }: RatingCardProps)
                     className={classMerger(
                         'text-neutral-background-highlight',
                         sizeClasses[size],
-                        theme === 'dark' ? 'brightness-150' : 'brightness-90'
+                        theme === 'dark' ? 'brightness-50' : 'brightness-90'
                     )} />
             ))}
         </div>
