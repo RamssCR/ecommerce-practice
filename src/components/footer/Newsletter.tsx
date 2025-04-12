@@ -36,7 +36,7 @@ export default function Newsletter() {
                     Subscribe
                 </Button>
             </article>
-            <Message status="success" />
+            {/* <Message status="success" /> */}
         </section>
     )
 }
