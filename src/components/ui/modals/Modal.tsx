@@ -3,7 +3,7 @@ import { createPortal } from "react-dom"
 import { motion, AnimatePresence } from "framer-motion"
 import { classMerger } from '@utils/classMerger'
 
-export interface ModalProps extends HTMLAttributes<HTMLDivElement> {
+export type ModalProps = HTMLAttributes<HTMLDivElement> & {
   isOpen: boolean
   onClose: () => void
   position?: "right" | "center"

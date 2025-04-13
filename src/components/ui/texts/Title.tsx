@@ -1,7 +1,7 @@
 import type { HTMLAttributes } from 'react'
 import { classMerger } from '@utils/classMerger'
 
-interface HeadingProps extends HTMLAttributes<HTMLHeadingElement> {
+type HeadingProps = HTMLAttributes<HTMLHeadingElement> & {
     as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
 }
 

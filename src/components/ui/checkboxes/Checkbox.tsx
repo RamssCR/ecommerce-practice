@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCheck } from "@fortawesome/free-solid-svg-icons"
 import Text from "@components/ui/texts/Text"
 
-interface CheckboxProps extends InputHTMLAttributes<HTMLInputElement> {
+type CheckboxProps = InputHTMLAttributes<HTMLInputElement> & {
     variant?: 'primary' | 'background' | 'none'
     title?: string
 }

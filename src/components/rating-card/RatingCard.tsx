@@ -3,7 +3,7 @@ import { faStar, faStarHalf } from '@fortawesome/free-solid-svg-icons'
 import { useThemeProvider } from '@hooks/useThemeProvider'
 import { classMerger } from '@utils/classMerger'
 
-interface RatingCardProps {
+type RatingCardProps = {
     rating: number
     size?: 'small' | 'medium' | 'large'
 }

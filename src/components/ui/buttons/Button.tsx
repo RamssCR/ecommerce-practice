@@ -1,8 +1,9 @@
 import type { ButtonHTMLAttributes } from 'react'
+import { buttonVariants, type ButtonVariant } from '@styles/variants/buttonVariants'
 import { classMerger } from '@utils/classMerger'
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-    variant?: 'primary' | 'outline' | 'color-primary' | 'color-primary-light' | 'color-primary-dark' | 'none'
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+    variant?: ButtonVariant
 }
 
 /**
@@ -15,22 +16,22 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
  *  Click me!
  * </Button>
  */
-export default function Button({ children, variant = "primary", onClick, className, ...props }: ButtonProps) {
-    const variants = {
-        primary: 'bg-neutral-text text-neutral-background',
-        "color-primary": 'bg-primary text-white',
-        "color-primary-light": 'bg-primary-light text-primary-dark',
-        "color-primary-dark": 'bg-primary-dark text-primary-light',
-        outline: 'bg-transparent text-neutral-text border-neutral-text',
-        none: ''
-    }
-
+export default function Button({ 
+    children, 
+    disabled = false,
+    variant = "primary", 
+    type = 'button',
+    className, 
+    ...props 
+}: ButtonProps) {
     return (
         <button
-            onClick={onClick}
+            type={type}
             className={classMerger(
-                variant !== 'none' && 'py-3 px-5 rounded-md border border-transparent',
-                variants[variant],
+                'hover:cursor-pointer focus:outline-none',
+                variant !== 'none' ? 'py-3 px-5 rounded-md border border-transparent transition-colors duration-200' : '',
+                buttonVariants[variant],
+                disabled ? `${buttonVariants.ghost} cursor-not-allowed` : '',
                 className
             )}
             {...props}

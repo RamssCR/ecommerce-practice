@@ -1,6 +1,6 @@
 import Button from '@components/ui/buttons/Button'
 import Filters from './Filters'
-import Modal, { ModalProps } from "@components/ui/modals/Modal"
+import Modal, { type ModalProps } from "@components/ui/modals/Modal"
 
 export default function MobileFilters({ isOpen, onClose }: Pick<ModalProps, 'isOpen' | 'onClose'>) {
     return (
