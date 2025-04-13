@@ -1,4 +1,4 @@
-import { useState, useEffect, ReactNode } from 'react'
+import { useState, useEffect, type ReactNode } from 'react'
 import { ThemeContext } from '@context/ThemeContext'
 import colorPallete from '@data/colorPallete.json'
 
@@ -25,7 +25,7 @@ type Theme = 'light' | 'dark'
  */
 export default function ThemeProvider({ children }: { children: ReactNode }) {
     const [theme, setTheme] = useState<Theme>(() => localStorage.getItem('theme') as Theme ?? 'light')
-    const { neutral } = colorPallete
+    const { neutral, primary } = colorPallete
 
     const setCSSAttribute = (attribute: string, value: string) => {
         document.body.style.setProperty(attribute, value)
@@ -40,7 +40,14 @@ export default function ThemeProvider({ children }: { children: ReactNode }) {
                 setCSSAttribute(`--color-${color}`, neutral[theme][typedColor])
             }
         }
-    }, [theme])
+
+        for (const color in primary) {
+            if (Object.prototype.hasOwnProperty.call(primary, color)) {
+                const typedColor = color as keyof typeof primary
+                setCSSAttribute(`--color-${color}`, primary[typedColor])
+            }
+        }
+    }, [theme, neutral, primary])
 
     const toggleTheme = () => setTheme(prev => prev === 'light' ? 'dark' : 'light')
 
