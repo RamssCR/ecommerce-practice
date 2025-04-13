@@ -14,8 +14,18 @@ export default defineConfig(({ mode }) => {
       tsconfigPaths(),
     ],
     build: {
+      target: 'esnext',
       minify: isProduction ? 'esbuild' : false,
       sourcemap: !isProduction,
+      rollupOptions: {
+        output: {
+          manualChunks(id) {
+            if (id.includes('node_modules')) {
+              return 'vendor'
+            }
+          },
+        },
+      },
     },
     server: {
       open: true,
