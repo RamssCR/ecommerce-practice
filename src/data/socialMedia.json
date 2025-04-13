@@ -1,0 +1,32 @@
+[
+    {
+        "id": "sm1",
+        "platform": "Facebook",
+        "url": "https://www.facebook.com",
+        "color": "text-blue-600"
+    },
+    {
+        "id": "sm2",
+        "platform": "Instagram",
+        "url": "https://www.instagram.com",
+        "color": "text-pink-500"
+    },
+    {
+        "id": "sm3",
+        "platform": "X",
+        "url": "https://www.twitter.com",
+        "color": "text-black"
+    },
+    {
+        "id": "sm4",
+        "platform": "Twitch",
+        "url": "https://www.twitch.tv",
+        "color": "text-purple-600"
+    },
+    {
+        "id": "sm5",
+        "platform": "YouTube",
+        "url": "https://www.youtube.com",
+        "color": "text-red-600"
+    }
+]
