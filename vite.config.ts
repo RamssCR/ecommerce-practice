@@ -4,6 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 import tsconfigPaths from 'vite-tsconfig-paths'
 
 // https://vite.dev/config/
+/// <reference types="vitest/config" />
 export default defineConfig(({ mode }) => {
   const isProduction = mode === 'production';
 
@@ -29,6 +30,29 @@ export default defineConfig(({ mode }) => {
     },
     server: {
       open: true,
+    },
+    test: {
+      globals: true,
+      environment: 'jsdom',
+      reporters: ['default', 'html'],
+      css: true,
+      coverage: {
+        provider: 'v8',
+        reporter: ['text', 'json', 'html'],
+        exclude: [
+          'node_modules/**',
+          'src/App.tsx',
+          'src/main.tsx',
+          'dist/**',
+          'coverage/**',
+          'test/**',
+          'html/**',
+          'vite.config.ts',
+          'vitest.config.ts',
+          'eslint.config.js',
+        ],
+        all: true,
+      },
     },
   }
 })

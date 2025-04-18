@@ -1,8 +1,6 @@
 import { classMerger } from '@utils/classMerger'
 import AppLink from '@components/ui/app-links/AppLink'
-import Image from '@components/ui/images/Image'
 import Title from '@components/ui/texts/Title'
-import headsetsImage from '/mock-images/categories/headsets.avif'
 
 type SaleCardProps = {
     theme?: 'purple' | 'scarlet' | 'pink' | 'blue' | 'background'
