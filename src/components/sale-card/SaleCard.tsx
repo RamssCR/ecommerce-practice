@@ -4,7 +4,7 @@ import Image from '@components/ui/images/Image'
 import Title from '@components/ui/texts/Title'
 import headsetsImage from '/mock-images/categories/headsets.avif'
 
-interface SaleCardProps {
+type SaleCardProps = {
     theme?: 'purple' | 'scarlet' | 'pink' | 'blue' | 'background'
 }
 

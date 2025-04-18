@@ -1,6 +1,6 @@
 import { FontAwesomeIcon, type FontAwesomeIconProps } from "@fortawesome/react-fontawesome";
 import { classMerger } from "@utils/classMerger";
-import { InputHTMLAttributes } from "react";
+import type { InputHTMLAttributes } from "react";
 import Textbox from "./Texbox";
 
 type InputProps = InputHTMLAttributes<HTMLInputElement> & {

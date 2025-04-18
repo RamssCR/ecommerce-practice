@@ -4,7 +4,7 @@ import { useThemeProvider } from '@hooks/useThemeProvider'
 import Title from '@components/ui/texts/Title'
 import Text from '@components/ui/texts/Text'
 
-interface ServiceItemProps extends FontAwesomeIconProps {
+type ServiceItemProps = FontAwesomeIconProps & {
     perk: string
     description: string
 }

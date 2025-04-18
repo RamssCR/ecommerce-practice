@@ -7,11 +7,11 @@ type ServicesMap = {
     description: string
 }
 
-/*
-    This file contains a map of services offered by the company. 
-    Each service includes an icon, a perk, and a description.
-    The services are used in the UI to inform users about the 
-    benefits of shopping with the company.
+/**
+  * This file contains a map of services offered by the company. 
+  * Each service includes an icon, a perk, and a description.
+  * The services are used in the UI to inform users about the 
+  * benefits of shopping with the company.
 */
 export const services: ServicesMap[] = [
     {

@@ -1,11 +1,15 @@
-import { useState, type ReactNode } from 'react'
+import { 
+    useState, 
+    type KeyboardEventHandler, 
+    type ReactNode 
+} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'
 import { classMerger } from '@utils/classMerger'
 import Button from '@components/ui/buttons/Button'
 import Text from '@components/ui/texts/Text'
 
-interface AccordionProps {
+type AccordionProps = {
     children: ReactNode
     title: string
     counter?: number
@@ -20,12 +24,21 @@ export default function Accordion({
 }: AccordionProps) {
     const [isOpen, setIsOpen] = useState(true)
     const toggleAccordion = () => setIsOpen(prev => !prev)
+    const handleKeyUp: KeyboardEventHandler<HTMLElement> = (e) => {
+        if (e.key === 'Enter') {
+            e.preventDefault()
+            toggleAccordion()
+        }
+    }
 
     return (
         <article className="w-full">
             <section 
                 onClick={toggleAccordion} 
-                className="w-full flex items-center justify-between py-1 hover:cursor-pointer"
+                onKeyUp={handleKeyUp}
+                role="button"
+                tabIndex={0}
+                className="w-full flex items-center justify-between py-1 hover:cursor-pointer outline-none focus:outline-none"
             >
                 <article className="flex items-center gap-2">
                     <Text className="lg:text-lg">{title}</Text>

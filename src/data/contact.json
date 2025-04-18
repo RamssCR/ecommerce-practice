@@ -1,0 +1,17 @@
+[
+    {
+        "id": "phone-contact",
+        "title": "Phone",
+        "value": "+1 (555) 123-4567"
+    },
+    {
+        "id": "address-contact",
+        "title": "Address",
+        "value": "123 Main Street, Suite 100, New York, NY 10001"
+    },
+    {
+        "id": "email-contact",
+        "title": "Email",
+        "value": "support.music@musioshore.com"
+    }
+]

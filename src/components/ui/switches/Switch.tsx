@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-interface SwitchProps {
+type SwitchProps = {
     checked?: boolean
     onChange?: (checked: boolean) => void
 }
@@ -32,7 +32,10 @@ export default function Switch({ checked = false, onChange }: SwitchProps) {
     }
 
     return (
-        <label className="relative inline-flex items-center cursor-pointer">
+        <label 
+            className="relative inline-flex items-center cursor-pointer"
+            aria-label='Switch'
+        >
             <input 
                 type="checkbox"
                 className="sr-only peer"

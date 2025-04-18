@@ -1,14 +1,31 @@
+import type { InputHTMLAttributes } from "react";
 import { classMerger } from "@utils/classMerger";
 
-export default function Textbox({ className, value, ...props }: React.InputHTMLAttributes<HTMLInputElement>) {
+export type TextboxProps = InputHTMLAttributes<HTMLInputElement> & {
+    variant?: 'appStyle' | 'form' | 'none'
+    register?: (value: string, options?: object) => void
+}
+
+export default function Textbox({ 
+    type = "text", 
+    className, 
+    variant = 'appStyle', 
+    ...props 
+}: TextboxProps) {
+    const variants = {
+        appStyle: 'p-2 bg-transparent',
+        form: 'py-3 px-4 bg-neutral-background-highlight placeholder:text-neutral-text-highlight/60',
+        none: ''
+    }
+
     return (
         <input
-            type="text"
+            type={type}
             className={classMerger(
-                'w-full p-2 bg-transparent rounded-lg focus:outline-none',
+                'w-full rounded-lg focus:outline-none',
+                variants[variant],
                 className
             )}
-            value={value}
             {...props}
         />
     )

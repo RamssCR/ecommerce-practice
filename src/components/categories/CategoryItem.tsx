@@ -2,7 +2,7 @@ import AppLink from '@components/ui/app-links/AppLink'
 import Icon from '@components/ui/images/Icon'
 import Text from '@components/ui/texts/Text'
 
-interface CategoryItemProps {
+type CategoryItemProps = {
     name: string
     image: string
 }

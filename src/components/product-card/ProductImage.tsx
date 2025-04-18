@@ -2,6 +2,7 @@ import { faBookmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useThemeProvider } from '@hooks/useThemeProvider';
 import AppLink from '@components/ui/app-links/AppLink';
+import Image from '@components/ui/images/Image';
 import mockImage from '/mock-images/categories/headsets.avif';
 
 export default function ProductImage() {
@@ -10,10 +11,10 @@ export default function ProductImage() {
     return (
         <article className="w-full rounded-lg relative">
             <AppLink to="/products/wireless-headsets">
-                <img 
+                <Image 
                     src={mockImage} 
                     alt="Headsets" 
-                    className="w-full object-contain transition-transform duration-300 group-hover:scale-105" 
+                    className="w-full aspect-square object-contain transition-transform duration-300 group-hover:scale-105" 
                 />
             </AppLink>
             <button className="absolute top-1 right-1">
