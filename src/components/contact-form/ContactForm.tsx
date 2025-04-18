@@ -1,28 +1,31 @@
+import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import Textbox, { type TextboxProps } from "@components/ui/textboxes/Texbox"
 import Label from "@components/ui/labels/Label"
 import Button from '@components/ui/buttons/Button'
 import Title from '@components/ui/texts/Title'
+import FormPopup from './FormPopup'
+import { formFields } from '@utils/contactFields'
 
-const InputField = ({ 
-    type, 
-    name, 
+const InputField = ({
+    type,
+    name,
     placeholder = "",
     register
 }: TextboxProps) => {
     const fieldName = name?.split('-').join(' ')
     const autoComplete = {
-        name: "on",
+        name: "off",
         email: "email",
         phone: "tel",
-        message: "on",
+        message: "off",
     }
 
     return (
         <article className="w-full space-y-2">
-            <Label 
+            <Label
                 htmlFor={name}
-                className="flex items-center gap-1"
+                className="flex items-center gap-1 capitalize"
             >
                 {fieldName}
             </Label>
@@ -40,21 +43,21 @@ const InputField = ({
 }
 
 export default function ContactForm() {
-    const { register } = useForm()
-    const formFields = [
-        { name: "name", type: "text", placeholder: "Your Name" },
-        { name: "email", type: "email", placeholder: "Your Email" },
-        { name: "phone", type: "tel", placeholder: "Your Phone" },
-        { name: "message", type: "text", placeholder: "Your Message" }
-    ]
+    const [modal, setModal] = useState(false)
+    const { register, handleSubmit, formState: { errors } } = useForm()
+
+    const toggleModal = () => setModal((prev) => !prev)
+    const isExistingError = Object.keys(errors).length > 0
 
     return (
-        <form className="w-full flex flex-col gap-4 items-center">
+        <form
+            onSubmit={handleSubmit((data) => console.log(data))}
+            className="w-full flex flex-col gap-4 items-center">
             <Title as="h2" className="text-2xl lg:text-3xl font-semibold">
                 Contact Us
             </Title>
             {formFields.map((field, index) => (
-                <InputField 
+                <InputField
                     key={index}
                     type={field.type}
                     name={field.name}
@@ -63,12 +66,18 @@ export default function ContactForm() {
                     register={register}
                 />
             ))}
-            <Button 
-                variant="color-primary" 
+            <Button
+                type="submit"
+                variant="color-primary"
                 className="w-full py-3 mt-2"
+                onClick={toggleModal}
             >
                 Submit
             </Button>
+            {isExistingError 
+                ? <FormPopup isOpen={modal} onClose={toggleModal} type="error" />
+                : <FormPopup isOpen={modal} onClose={toggleModal} type="success" />
+            }
         </form>
     )
 }
