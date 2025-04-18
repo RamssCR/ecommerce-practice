@@ -51,8 +51,11 @@ export default function Modal({
           <motion.div
             key="modal-content"
             className={`
-              bg-neutral-background-highlight shadow-xl h-screen w-full md:max-w-md p-6
-              ${position === "right" ? "ml-auto h-screen md:rounded-l-lg overflow-auto" : "rounded-xl"}
+              bg-neutral-background-highlight shadow-xl
+              ${position === "right" 
+                ? "ml-auto h-screen md:rounded-l-lg overflow-auto w-full md:max-w-md p-6" 
+                : "rounded-xl w-full max-w-[21em] min-[425px]:max-w-[23.6em] md:max-w-md lg:max-w-xl py-7 px-6"
+              }
             `}
             initial={{
               opacity: 0,
