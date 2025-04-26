@@ -4,6 +4,7 @@ import Header from './components/header/Header'
 import Home from './views/Home'
 import Contact from './views/Contact'
 import Products from './views/Products'
+import Product from './views/Product'
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/products/:slug" element={<Product />} />
           <Route path="/cart" element={<h1>Cart</h1>} />
         </Routes>
         <Footer />
