@@ -25,7 +25,8 @@
 
     /* Paths */
     "paths": {
-      "@*": ["src/*"]
+      "@*": ["src/*"],
+      "@localTypes/*": ["src/types/*"]
     }
   },
   "include": ["src", "test"],
