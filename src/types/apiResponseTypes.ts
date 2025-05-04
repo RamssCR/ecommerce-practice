@@ -1,5 +1,5 @@
 export type PostResponse = {
     code: string
-    status: string
+    status: 'success' | 'error'
     message: string
 }

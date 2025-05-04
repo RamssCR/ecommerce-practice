@@ -8,6 +8,6 @@ export type FilterRecord = Record<string, FilterItem[]>
 
 export type FilterProps = {
     className?: string
-    filters: Record<string, FilterItem[]>
+    filters: FilterRecord
     loading?: boolean
 }

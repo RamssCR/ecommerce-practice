@@ -14,7 +14,7 @@ import products from '@data/products.json'
 export default function Products() {
     const [modal, setModal] = useState(false)
     const toggleModal = () => setModal((prev) => !prev)
-    const { data: categoryFilters } = useQuery({
+    const { data: categoryFilters, isPending } = useQuery({
         queryKey: ["filters"],
         queryFn: () => getCategories()
     })
@@ -22,7 +22,11 @@ export default function Products() {
     return (
         <section className="mt-24 w-full px-8 py-6 bg-neutral-background">
             <Container className="mx-auto grid grid-cols-1 gap-y-5 lg:grid-cols-4 lg:gap-x-6 xl:gap-x-10">
-                <Filters className="hidden lg:flex" filters={categoryFilters as Record<string, FilterRecord>} />
+                <Filters 
+                    className="hidden lg:flex" 
+                    filters={categoryFilters as FilterRecord} 
+                    loading={isPending}
+                />
                 <section className="lg:col-span-3 w-full flex flex-col gap-5">
                     <Button 
                         variant="none" 
@@ -47,7 +51,8 @@ export default function Products() {
                     <MobileFilters 
                         isOpen={modal} 
                         onClose={toggleModal} 
-                        filters={categoryFilters as Record<string, FilterRecord>}
+                        filters={categoryFilters as FilterRecord}
+                        loading={isPending}
                     />
                 </section>
             </Container>

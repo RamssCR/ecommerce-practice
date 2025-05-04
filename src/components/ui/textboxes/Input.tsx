@@ -3,12 +3,12 @@ import { classMerger } from "@utils/classMerger";
 import type { InputHTMLAttributes } from "react";
 import Textbox from "./Texbox";
 
-type InputProps = InputHTMLAttributes<HTMLInputElement> & {
+export type InputProps = InputHTMLAttributes<HTMLInputElement> & {
     icon?: FontAwesomeIconProps['icon']
     variant?: 'full-rounded' | 'half-full-rounded' | 'half-rounded' | 'rounded' | 'square' | 'full-square'
 }
 
-export default function Input({ icon, placeholder = "Text something here...", variant = "rounded" }: InputProps) {
+export default function Input({ icon, placeholder = "Text something here...", variant = "rounded", ...props }: InputProps) {
     const variants = {
         "full-rounded": "md:rounded-full",
         "full-square": "md:rounded-full",
@@ -30,7 +30,12 @@ export default function Input({ icon, placeholder = "Text something here...", va
                         className="text-neutral-text-highlight"
                     />
                 )}
-                <Textbox placeholder={placeholder} name="newsletter" className="w-full" />
+                <Textbox 
+                    placeholder={placeholder} 
+                    name="newsletter" 
+                    className="w-full" 
+                    {...props}
+                />
             </section>
         </article>
     )

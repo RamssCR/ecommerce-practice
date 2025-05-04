@@ -53,7 +53,7 @@ export default function Checkbox({
                     className="text-sm"
                 />}
             </article>
-            {title && <Text>{title}</Text>}
+            {title && <Text className="capitalize">{title}</Text>}
         </label>
     )
 }

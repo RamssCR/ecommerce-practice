@@ -1,8 +1,14 @@
+import type { FilterRecord } from '@localTypes/filtersTypes'
+import Modal, { type ModalProps } from "@components/ui/modals/Modal"
 import Button from '@components/ui/buttons/Button'
 import Filters from './Filters'
-import Modal, { type ModalProps } from "@components/ui/modals/Modal"
 
-export default function MobileFilters({ isOpen, onClose }: Pick<ModalProps, 'isOpen' | 'onClose'>) {
+type MobileFiltersProps = Pick<ModalProps, 'isOpen' | 'onClose'> & {
+    filters: FilterRecord
+    loading?: boolean
+}
+
+export default function MobileFilters({ isOpen, onClose, filters, loading }: MobileFiltersProps) {
     return (
         <Modal 
             isOpen={isOpen} 
@@ -11,7 +17,11 @@ export default function MobileFilters({ isOpen, onClose }: Pick<ModalProps, 'isO
             className="lg:hidden"
         >
             <article className="flex flex-col items-start w-full justify-between h-full overflow-y-scroll">
-                <Filters className="w-full flex mb-7" />
+                <Filters 
+                    className="w-full flex mb-7"
+                    filters={filters}
+                    loading={loading}
+                />
                 <Button 
                     variant="primary" 
                     className="w-full mt-auto" 
