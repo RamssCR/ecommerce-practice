@@ -1,0 +1,23 @@
+[
+    {
+        "id": "sale-00001",
+        "name": "Headsets Eagle",
+        "percentage": 20,
+        "image": "/images/sales-banners/headsets-banner.jpg",
+        "slug": "headsets-eagle"
+    },
+    {
+        "id": "sale-00002",
+        "name": "Wireless Earbuds",
+        "percentage": 15,
+        "image": "/images/sales-banners/wireless-banner.jpeg",
+        "slug": "wireless-earbuds"
+    },
+    {
+        "id": "sale-00003",
+        "name": "Speakers Pro",
+        "percentage": 25,
+        "image": "/images/sales-banners/speaker-banner.jpg",
+        "slug": "speakers-pro"
+    }
+]

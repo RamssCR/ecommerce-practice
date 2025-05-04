@@ -1,0 +1,22 @@
+[
+    {
+        "id": "category-00001",
+        "name": "Headsets",
+        "image": "/mock-images/categories/headsets.avif"
+    },
+    {
+        "id": "category-00002",
+        "name": "Speakers",
+        "image": "/mock-images/categories/speakers.jpg"
+    },
+    {
+        "id": "category-00003",
+        "name": "Wireless",
+        "image": "/mock-images/categories/wireless.jpg"
+    },
+    {
+        "id": "category-00004",
+        "name": "Accessories",
+        "image": "/mock-images/categories/accessories.jpg"
+    }
+]

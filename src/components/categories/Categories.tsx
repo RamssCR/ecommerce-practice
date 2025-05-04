@@ -3,7 +3,7 @@ import Container from "@components/ui/containers/Container"
 import Title from "@components/ui/texts/Title"
 import Text from "@components/ui/texts/Text"
 import CategoryItem from './CategoryItem'
-import mockImage from '/mock-images/categories/headsets.avif'
+import categories from '@data/categories.json'
 
 export default function Categories() {
     return (
@@ -20,10 +20,9 @@ export default function Categories() {
                     </AppLink>
                 </section>
                 <section className="w-full col-span-3 grid grid-cols-2 gap-y-10 md:grid-cols-4 lg:gap-x-5">
-                    <CategoryItem name="Headsets" image={mockImage} />
-                    <CategoryItem name="Headsets" image={mockImage} />
-                    <CategoryItem name="Headsets" image={mockImage} />
-                    <CategoryItem name="Headsets" image={mockImage} />
+                    {categories.map(category => (
+                        <CategoryItem key={category.id} {...category} />
+                    ))}
                 </section>
             </Container>
         </section>

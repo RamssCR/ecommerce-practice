@@ -1,0 +1,62 @@
+[
+    {
+        "id": "product-00001",
+        "name": "Wireless Headsets XT-2000",
+        "category": "headsets",
+        "image": "/images/products/headsets.avif",
+        "price": 299.99,
+        "salePrice": 249.99,
+        "discount": 17,
+        "isNew": true,
+        "bookmarked": false,
+        "description": "Premium wireless headphones with advanced noise-canceling technology. Features Bluetooth 5.0 connectivity and up to 30 hours of battery life. Includes comfortable memory foam ear cushions and foldable design. Perfect for immersive audio experience with high-fidelity sound quality.",
+        "tax": 24.99,
+        "slug": "wireless-headsets-xt-2000-black",
+        "rating": 4.8
+    },
+    {
+        "id": "product-00003",
+        "name": "Office Headsets XH-100",
+        "category": "headsets",
+        "image": "/images/products/headsets-black.png",
+        "price": 399.99,
+        "salePrice": 359.99,
+        "discount": 10,
+        "isNew": true,
+        "bookmarked": false,
+        "description": "Professional office headset in sleek black design. Features crystal-clear audio quality and noise-canceling microphone for business communications. Includes comfortable leather ear cushions and adjustable headband for all-day wear. Compatible with all major communication platforms and desk phones. Built-in inline controls for volume and mute functions.",
+        "tax": 35.99,
+        "slug": "office-headsets-xh-100-black",
+        "rating": 4.2
+    },
+    {
+        "id": "product-00004",
+        "name": "Gaming Envolve Headsets OP-5039",
+        "category": "headsets",
+        "image": "/images/products/headsets-blue.png",
+        "price": 149.99,
+        "salePrice": 149.99,
+        "discount": 0,
+        "isNew": true,
+        "bookmarked": false,
+        "description": "Gaming headset with RGB lighting and surround sound. Features adjustable headband and soft ear cushions for comfort during long gaming sessions. Compatible with PC, PS4, and Xbox. Includes detachable microphone for clear communication.",
+        "tax": 12.99,
+        "slug": "gaming-envolve-headsets-op-5039-blue",
+        "rating": 3.7
+    },
+    {
+        "id": "product-00008",
+        "name": "Wired Earphones Red Edition WE-5130",
+        "category": "earphones",
+        "image": "/images/products/semi-wireless-earphones-red.png",
+        "price": 179.99,
+        "salePrice": 149.99,
+        "discount": 17,
+        "isNew": true,
+        "bookmarked": false,
+        "description": "Stylish semi-wireless earphones with deep bass. Features Bluetooth 5.0 and touch controls. Includes multiple ear tips for a secure fit. Perfect for music lovers.",
+        "tax": 14.99,
+        "slug": "semi-wireless-earphones-swe-5101-red",
+        "rating": 4.1
+    }
+]

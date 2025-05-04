@@ -17,7 +17,7 @@ export default function CategoryItem({ name, image }: CategoryItemProps) {
                 src={image}
                 alt={name}
                 title={`See ${name} category`}
-                className="size-24 rounded-full bg-white shadow-md shadow-neutral-background-highlight lg:size-24 xl:size-30 lg:transition-transform lg:duration-200 lg:hover:scale-105"
+                className="size-24 rounded-full p-2 bg-white shadow-md shadow-neutral-background-highlight lg:size-24 xl:size-30 lg:transition-transform lg:duration-200 lg:hover:scale-105"
             />
             <Text className="text-xl hover:text-primary">{name}</Text>
         </AppLink>

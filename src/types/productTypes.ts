@@ -8,13 +8,13 @@ export type ProductProps = {
     name: string
     slug: string
     price: number
-    rating?: number
+    salePrice: number
+    rating: number
     tax: number
+    bookmarked: boolean
 }
 
 export type CartItemProps = ProductProps & {
-    cover: boolean
     quantity: number
     total: number
-    bookmarked: boolean
 }

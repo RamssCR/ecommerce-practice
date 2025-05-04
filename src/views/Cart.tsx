@@ -15,7 +15,6 @@ export default function Cart() {
         id: '1',
         bookmarked: false,
         category: 'headsets',
-        cover: false,
         description: 'Sample product description',
         discount: 10,
         image: '/mock-images/categories/headsets.avif',
@@ -25,7 +24,9 @@ export default function Cart() {
         price: 90,
         tax: 5,
         quantity: 2,
-        total: 190
+        total: 190,
+        salePrice: 185,
+        rating: 4.5
     }
 
     return (

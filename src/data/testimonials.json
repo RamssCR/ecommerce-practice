@@ -1,0 +1,23 @@
+[
+    {
+        "id": "testimonial-00001",
+        "name": "Sarah Johnson",
+        "avatar": "/mock-images/avatars/male-avatar.webp",
+        "rating": 5,
+        "message": "I recently purchased the AirPods Pro from this store and I'm absolutely thrilled! The sound quality is exceptional, and the noise cancellation feature is a game-changer for my daily commute. The ordering process was seamless, and the delivery was faster than expected. Customer service was incredibly helpful when I had questions about the features. I've already recommended this store to all my friends and family. Best audio purchase I've made!"
+    },
+    {
+        "id": "testimonial-00002",
+        "name": "Michael Chen",
+        "avatar": "/mock-images/avatars/male-avatar.webp",
+        "rating": 4.8,
+        "message": "The wireless earbuds I bought exceeded my expectations. The bass response is fantastic, and they're so comfortable I forget I'm wearing them. The battery life is impressive, lasting through my longest workouts. What really stood out was the post-purchase support - when I needed help with pairing, their tech team was quick to assist. The price was competitive, and the value for money is outstanding. Definitely a five-star experience!"
+    },
+    {
+        "id": "testimonial-00003",
+        "name": "Emma Rodriguez",
+        "avatar": "/mock-images/avatars/male-avatar.webp",
+        "rating": 4.9,
+        "message": "As an audiophile, I'm very particular about sound quality. The premium speakers I purchased from this store are simply remarkable. The clarity and depth of sound are unmatched, and the build quality is superb. Shipping was well-packaged and secure. When I had a minor issue with the setup, their support team walked me through the solution step by step. I'm thoroughly impressed with both the product and service quality!"
+    }
+]

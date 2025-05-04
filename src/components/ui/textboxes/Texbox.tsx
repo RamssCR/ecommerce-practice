@@ -3,7 +3,6 @@ import { classMerger } from "@utils/classMerger";
 
 export type TextboxProps = InputHTMLAttributes<HTMLInputElement> & {
     variant?: 'appStyle' | 'form' | 'none'
-    register?: (value: string, options?: object) => void
 }
 
 export default function Textbox({ 

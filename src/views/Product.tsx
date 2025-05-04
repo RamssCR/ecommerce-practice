@@ -1,18 +1,18 @@
 import { useState } from 'react'
 import { useLocation } from 'react-router-dom'
+import { useThemeProvider } from '@hooks/useThemeProvider'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookmark } from '@fortawesome/free-solid-svg-icons'
-import Container from "@components/ui/containers/Container"
+import Button from '@components/ui/buttons/Button'
 import Breadcrumb from "@components/ui/breadcrumbs/Breadcrumb"
+import Container from "@components/ui/containers/Container"
 import Image from '@components/ui/images/Image'
-import headsetImage from '/mock-images/categories/headsets.avif'
+import QuantityPicker from '@components/quantity-picker/QuantityPicker'
+import RatingCard from '@components/rating-card/RatingCard'
 import Text from '@components/ui/texts/Text'
 import Title from '@components/ui/texts/Title'
-import RatingCard from '@components/rating-card/RatingCard'
-import QuantityPicker from '@components/quantity-picker/QuantityPicker'
-import Button from '@components/ui/buttons/Button'
 import Tooltip from '@components/ui/tooltips/Tooltip'
-import { useThemeProvider } from '@hooks/useThemeProvider'
+import headsetImage from '/mock-images/categories/headsets.avif'
 
 type Path = {
     name: string

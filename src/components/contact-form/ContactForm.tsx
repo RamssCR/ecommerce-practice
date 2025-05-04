@@ -1,57 +1,34 @@
+import type { ContactMessage } from "@localTypes/contactTypes"
+import type { PostResponse } from "@localTypes/apiResponseTypes"
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
-import Textbox, { type TextboxProps } from "@components/ui/textboxes/Texbox"
-import Label from "@components/ui/labels/Label"
-import Button from '@components/ui/buttons/Button'
-import Title from '@components/ui/texts/Title'
-import FormPopup from './FormPopup'
+import { useMutation } from "@tanstack/react-query"
+import { sendMessage } from "@helpers/contactMessage"
 import { formFields } from '@utils/contactFields'
-
-const InputField = ({
-    type,
-    name,
-    placeholder = "",
-    register
-}: TextboxProps) => {
-    const fieldName = name?.split('-').join(' ')
-    const autoComplete = {
-        name: "off",
-        email: "email",
-        phone: "tel",
-        message: "off",
-    }
-
-    return (
-        <article className="w-full space-y-2">
-            <Label
-                htmlFor={name}
-                className="flex items-center gap-1 capitalize"
-            >
-                {fieldName}
-            </Label>
-            <Textbox
-                type={type}
-                name={name}
-                id={name}
-                autoComplete={autoComplete[type as keyof typeof autoComplete]}
-                placeholder={placeholder}
-                variant="form"
-                {...register ? register(name as string, { required: true }) : {}}
-            />
-        </article>
-    )
-}
+import Button from '@components/ui/buttons/Button'
+import FormPopup from './FormPopup'
+import InputField from './InputField'
+import Title from '@components/ui/texts/Title'
+import Loader from "@components/ui/loaders/Loader"
 
 export default function ContactForm() {
     const [modal, setModal] = useState(false)
-    const { register, handleSubmit, formState: { errors } } = useForm()
+    const { register, handleSubmit, reset } = useForm<ContactMessage>()
 
     const toggleModal = () => setModal((prev) => !prev)
-    const isExistingError = Object.keys(errors).length > 0
+    const { 
+        mutateAsync: sendMessageAsync, 
+        error,
+        data,
+        isPending
+    } = useMutation({
+        mutationFn: sendMessage,
+        onSuccess: () => reset(),
+    })
 
     return (
         <form
-            onSubmit={handleSubmit((data) => console.log(data))}
+            onSubmit={handleSubmit(async (data) => await sendMessageAsync(data))}
             className="w-full flex flex-col gap-4 items-center">
             <Title as="h2" className="text-2xl lg:text-3xl font-semibold">
                 Contact Us
@@ -69,15 +46,16 @@ export default function ContactForm() {
             <Button
                 type="submit"
                 variant="color-primary"
-                className="w-full py-3 mt-2"
+                className="w-full flex justify-center items-center py-3 mt-2"
                 onClick={toggleModal}
             >
-                Submit
+                {isPending
+                    ? <Loader className="size-6" />
+                    : "Send Message"
+                }
             </Button>
-            {isExistingError 
-                ? <FormPopup isOpen={modal} onClose={toggleModal} type="error" />
-                : <FormPopup isOpen={modal} onClose={toggleModal} type="success" />
-            }
+            {error && !isPending && <FormPopup isOpen={modal} onClose={toggleModal} type="error" />}
+            {(data as PostResponse) && !isPending && <FormPopup isOpen={modal} onClose={toggleModal} type="success" />}
         </form>
     )
 }
