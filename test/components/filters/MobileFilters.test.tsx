@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import { describe, expect, test, vi } from 'vitest'
-import MobileFilters from '@components/filters/MobileFilters'
+import MobileFilters from '@components/products/filters/MobileFilters'
 
 describe('MobileFilters', () => {
     test('renders component correctly', () => {

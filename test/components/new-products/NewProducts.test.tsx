@@ -1,7 +1,7 @@
 import { MemoryRouter } from 'react-router-dom'
 import { render, screen } from '@testing-library/react'
 import { describe, expect, test, vi } from 'vitest'
-import NewProducts from '@components/new-products/NewProducts'
+import NewProducts from '@components/home/new-products/NewProducts'
 
 vi.mock('@hooks/useThemeProvider', () => ({
     useThemeProvider: vi.fn().mockReturnValue({ theme: 'light' }),

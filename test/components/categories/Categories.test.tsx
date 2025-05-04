@@ -1,9 +1,9 @@
 import { MemoryRouter } from 'react-router-dom'
 import { render, screen } from '@testing-library/react'
 import { describe, expect, test, vi } from 'vitest'
-import Categories from '@components/categories/Categories'
+import Categories from '@components/home/categories/Categories'
 
-vi.mock(import('@components/categories/CategoryItem'), async (importOriginal) => {
+vi.mock(import('@components/home/categories/CategoryItem'), async (importOriginal) => {
     const original = await importOriginal()
     return {
         ...original,

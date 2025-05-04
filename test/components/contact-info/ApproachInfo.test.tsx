@@ -3,7 +3,7 @@ import { MemoryRouter } from 'react-router-dom'
 import { render, screen } from '@testing-library/react'
 import { describe, expect, test, vi } from 'vitest'
 import { ThemeContext, type ThemeContextType } from '@context/ThemeContext'
-import ApproachInfo from '@components/contact-info/ApproachInfo'
+import ApproachInfo from '@components/contact/contact-info/ApproachInfo'
 
 const wrapper = ({ children, theme }: { children: ReactNode, theme: ThemeContextType['theme'] }) => (
     <ThemeContext.Provider value={{ theme, toggleTheme: vi.fn() }}>

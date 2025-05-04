@@ -1,7 +1,7 @@
 import { MemoryRouter } from 'react-router-dom'
 import { render, screen } from '@testing-library/react'
 import { describe, expect, test } from 'vitest'
-import SaleCard from '@components/sale-card/SaleCard'
+import SaleCard from '@components/home/sale-card/SaleCard'
 
 describe('SaleCard', () => {
     test('renders with default theme', () => {

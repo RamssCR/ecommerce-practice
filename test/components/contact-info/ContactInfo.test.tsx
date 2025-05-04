@@ -2,7 +2,7 @@ import { MemoryRouter } from 'react-router-dom'
 import { render, screen } from '@testing-library/react'
 import { describe, expect, test, vi } from 'vitest'
 import { useThemeProvider } from '@hooks/useThemeProvider'
-import ContactInfo from '@components/contact-info/ContactInfo'
+import ContactInfo from '@components/contact/contact-info/ContactInfo'
 
 vi.mock('@hooks/useThemeProvider')
 

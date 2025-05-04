@@ -1,6 +1,6 @@
 import { fireEvent, screen, render, waitFor } from '@testing-library/react'
 import { describe, expect, test } from 'vitest'
-import ContactForm from '@components/contact-form/ContactForm'
+import ContactForm from '@components/contact/contact-form/ContactForm'
 
 describe('ContactForm', () => {
     test('renders the component correctly', () => {

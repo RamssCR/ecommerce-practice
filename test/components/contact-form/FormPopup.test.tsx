@@ -1,6 +1,6 @@
 import { render, screen, waitFor } from '@testing-library/react'
 import { describe, expect, test, vi } from 'vitest'
-import FormPopup from '@components/contact-form/FormPopup'
+import FormPopup from '@components/contact/contact-form/FormPopup'
 import { act } from 'react'
 
 describe('FormPopup', () => {

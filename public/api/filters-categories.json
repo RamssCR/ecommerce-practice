@@ -1,0 +1,36 @@
+{
+    "product-type": [
+        {
+            "id": "category--product-type--00001",
+            "name": "headsets",
+            "selected": false
+        },
+        {
+            "id": "category--product-type--00002",
+            "name": "earphones",
+            "selected": false
+        },
+        {
+            "id": "category--product-type--00003",
+            "name": "speakers",
+            "selected": false
+        },
+        {
+            "id": "category--product-type--00004",
+            "name": "accessories",
+            "selected": false
+        }
+    ],
+    "others": [
+        {
+            "id": "category--others--00001",
+            "name": "new",
+            "selected": false
+        },
+        {
+            "id": "category--others--00002",
+            "name": "on sale",
+            "selected": false
+        }
+    ]
+}

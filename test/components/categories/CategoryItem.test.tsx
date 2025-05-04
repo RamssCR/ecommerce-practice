@@ -1,7 +1,7 @@
 import { MemoryRouter } from 'react-router-dom'
 import { render, screen } from '@testing-library/react'
 import { describe, expect, test } from 'vitest'
-import CategoryItem from '@/components/categories/CategoryItem'
+import CategoryItem from '@components/home/categories/CategoryItem'
 
 describe('CategoryItem', () => {
     test('renders with all required props', () => {

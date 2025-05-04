@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import { describe, expect, test, vi } from 'vitest'
-import TestimonialCard from '@components/testimonial-card/TestimonialCard'
+import TestimonialCard from '@components/home/testimonial-card/TestimonialCard'
 
 vi.mock('@hooks/useThemeProvider', () => ({
     useThemeProvider: () => ({

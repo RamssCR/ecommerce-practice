@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import { describe, expect, test } from 'vitest'
-import Filters from '@components/filters/Filters'
+import Filters from '@components/products/filters/Filters'
 
 describe('Filters', () => {
     test('renders Filters component', () => {

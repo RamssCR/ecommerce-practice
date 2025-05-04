@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import { describe, expect, test, vi } from 'vitest'
 import { useThemeProvider } from '@hooks/useThemeProvider'
-import ServiceItem from '@components/service-item/ServiceItem'
+import ServiceItem from '@components/home/service-item/ServiceItem'
 import { faAddressBook } from '@fortawesome/free-solid-svg-icons'
 
 vi.mock('@hooks/useThemeProvider')
